@@ -87,6 +87,11 @@
 			var material = new THREE.MeshBasicMaterial( { color: 0x306667 } );
 			var cube2 = new THREE.Mesh( geometry, material );
 	    		scene.add( cube2 );
+	    
+	    		var geometry = new THREE.BoxGeometry( 9, 2, 1 );
+			var material = new THREE.MeshBasicMaterial( { color: 0x332455 } );
+			var cube3 = new THREE.Mesh( geometry, material );
+	    		scene.add( cube3 );
 
 			camera.position.z = 5;
 
@@ -98,6 +103,9 @@
 				
 				cube2.rotation.x += 0.06;
 				cube2.rotation.y += 0.04;
+				
+				cube3.rotation.x += 0.09;
+				cube3.rotation.y += 0.02;
 
 				renderer.render( scene, camera );
 			};
