@@ -79,29 +79,7 @@
 
     </script>
 							     
-<script>
-    // follow me II
 
-      var followCursor = (
-      function() {
-      var s2 = document.getElementById('object2');
-      s2.style.position = 'absolute';
-
-      return {
-        init: function() {
-          document.body.appendChild(s);
-        },
-
-        run: function(e) {
-          var e = e || window.event;
-          s2.style.left = (e.clientX - 1) + 'px';
-          s2.style.top = (e.clientY - 1) + 'px';
-          getMouseCoords(e);
-        }
-      };
-    }());
-
-    </script>
     
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/103/three.js" integrity="sha256-Dz4QEGvodtXoy6gQW91o97WHBVvVXj7WsVA2LOUigbs=" crossorigin="anonymous"></script>
