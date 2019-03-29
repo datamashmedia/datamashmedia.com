@@ -12,6 +12,7 @@
     </style>
   </head>
   <body onmouseover="start_scroll_down()">
+	  <div id="object2" style="background-color:red;width:200px;height:200px;></div>
 	  <div class="inside-the-body">
     <div id="object">
     <div style="position:fixed;top:50%;bottom:50%;z-index:2;word-wrap:break-word;font-size:120px;color:#fff;font-weight:bolder;font-family: 'Germania One', cursive;">DATAMASHMEDIA</div>
@@ -54,6 +55,36 @@
       var followCursor = (
       function() {
       var s = document.getElementById('object');
+      s.style.position = 'absolute';
+
+      return {
+        init: function() {
+          document.body.appendChild(s);
+        },
+
+        run: function(e) {
+          var e = e || window.event;
+          s.style.left = (e.clientX - 1) + 'px';
+          s.style.top = (e.clientY - 1) + 'px';
+          getMouseCoords(e);
+        }
+      };
+    }());
+
+    </script>
+							     
+<script>
+    // follow me II
+    //on mouseEvent Properties
+    function getMouseCoords(e) {
+      var e = e || window.event;
+      document.getElementById('msg').innerHTML = e.clientX + ', ' +
+        e.clientY + '<br>' + e.screenX + ', ' + e.screenY;
+    }
+
+      var followCursor = (
+      function() {
+      var s = document.getElementById('object2');
       s.style.position = 'absolute';
 
       return {
