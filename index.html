@@ -72,16 +72,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/103/three.js" integrity="sha256-Dz4QEGvodtXoy6gQW91o97WHBVvVXj7WsVA2LOUigbs=" crossorigin="anonymous"></script>
     <script>
 			var scene = new THREE.Scene();
-			var camera = new THREE.PerspectiveCamera( 18, window.innerWidth/window.innerHeight, 0.1, 1000 );
+			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
 
 			var renderer = new THREE.WebGLRenderer( { alpha: true } );
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
 
 			var geometry = new THREE.BoxGeometry( 4, 1, 1 );
-			var material = new THREE.MeshBasicMaterial( { color: 0x30ff50 } );
+			var material = new THREE.MeshBasicMaterial( { color: 0x30f050 } );
 			var cube = new THREE.Mesh( geometry, material );
 			scene.add( cube );
+	    		scene.add( cube );
+	    		scene.add( cube );
 
 			camera.position.z = 5;
 
