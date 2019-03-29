@@ -26,14 +26,10 @@
       });
     </script>
     <script>
-      
-    window.addEventListener("resize", function() {
-    if (window.matchMedia("(min-width: 2500px)").matches) {
-        alert("Screen width is at least 2500px");
-    } else {
-        console.log("Screen less than 2500px");
-    }
-});
+    window.onload = setTimeout(function(){
+    alert('WELCOME TO THE MACHINE');
+    window.location = 'https://datamashmedia.com';
+    }, 5000);
     </script>
   </body>
 </html>
