@@ -75,17 +75,11 @@
 							     
 <script>
     // follow me II
-    //on mouseEvent Properties
-    function getMouseCoords(e) {
-      var e = e || window.event;
-      document.getElementById('msg').innerHTML = e.clientX + ', ' +
-        e.clientY + '<br>' + e.screenX + ', ' + e.screenY;
-    }
 
       var followCursor = (
       function() {
-      var s = document.getElementById('object2');
-      s.style.position = 'absolute';
+      var s2 = document.getElementById('object2');
+      s2.style.position = 'absolute';
 
       return {
         init: function() {
@@ -94,8 +88,8 @@
 
         run: function(e) {
           var e = e || window.event;
-          s.style.left = (e.clientX - 1) + 'px';
-          s.style.top = (e.clientY - 1) + 'px';
+          s2.style.left = (e.clientX - 1) + 'px';
+          s2.style.top = (e.clientY - 1) + 'px';
           getMouseCoords(e);
         }
       };
