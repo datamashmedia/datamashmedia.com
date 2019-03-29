@@ -47,9 +47,11 @@
     alert('WELCOME TO THE MACHINE');
     window.location = 'https://datamashmedia.com';
     }, 5000); */
-    if (window.innerWidth > 2000) {
-    alert('fuckyou');
-    }
+    window.addEventListener("resize", function() {
+      if (window.matchMedia("(width: 2000px)").matches) {
+        alert("Sick");
+      } 
+    });
     </script>
   </body>
 </html>
