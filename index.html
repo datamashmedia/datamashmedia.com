@@ -5,5 +5,17 @@
   </head>
   <body>
     data is collecting...
+    <div id="typed-strings">
+    <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+    <p>It <em>types</em> out sentences.</p>
+    </div>
+    <span id="typed"></span>
+   
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script>
+      var typed = new Typed('#typed', {
+        stringsElement: '#typed-strings'
+      });
+    </script>
   </body>
 </html>
