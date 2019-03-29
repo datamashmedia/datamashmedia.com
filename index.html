@@ -10,6 +10,7 @@
     </style>
   </head>
   <body>
+    <div id="object" style="height:200px;width:200px;border-radius:50%;"></div>
     <div style="position:fixed;word-wrap:break-word;font-size:120px;color:#fff;">DATAMASHMEDIA</div>
     <div id="typed-strings">
       <p>
@@ -30,6 +31,38 @@
     alert('WELCOME TO THE MACHINE');
     window.location = 'https://datamashmedia.com';
     }, 5000);
+      
+    // follow me
+    //on mouseEvent Properties
+    function getMouseCoords(e) {
+      var e = e || window.event;
+      document.getElementById('msg').innerHTML = e.clientX + ', ' +
+        e.clientY + '<br>' + e.screenX + ', ' + e.screenY;
+    }
+
+      var followCursor = (
+      function() {
+      var s = document.getElementById('object');
+      s.style.position = 'absolute';
+
+      return {
+        init: function() {
+          document.body.appendChild(s);
+        },
+
+        run: function(e) {
+          var e = e || window.event;
+          s.style.left = (e.clientX - 5) + 'px';
+          s.style.top = (e.clientY - 5) + 'px';
+          getMouseCoords(e);
+        }
+      };
+    }());
+
+    window.onload = function() {
+      followCursor.init();
+      document.body.onmousemove = followCursor.run;
+    }
     </script>
   </body>
 </html>
